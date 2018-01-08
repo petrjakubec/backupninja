@@ -1,12 +1,13 @@
 first, you need to install and configure mariadb
 ```
-yum install -y mariadb-server || apt-get install -y mariadb-server
-service mariadb start ||  sudo service mysqld start
-mysql_secure_installation #just hit enter because by default there is no password
+# yum install -y mariadb-server || apt-get install -y mariadb-server
+# service mariadb start ||  sudo service mysqld start
+# mysql_secure_installation #just hit enter because by default there is no password
 ```
-```
+
 after that you can log into db by password
-mysql -u root -p
+```
+# mysql -u root -p
 ```
 
 
@@ -18,10 +19,13 @@ configuration of backupninja can be easily done through tool **ninjahelper**
 /etc/backup.d/20.mysql
 
 you can run the job instantly:
-backupninja --now --debug
+```
+# backupninja --now --debug
+```
+
 
 logs can be found in:
-/var/log/backupninja.log 
+```/var/log/backupninja.log``` 
 
 sqldump will be created in 
-/var/backups/mysql
+```/var/backups/mysql```
