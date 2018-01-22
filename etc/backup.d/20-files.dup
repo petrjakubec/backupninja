@@ -42,8 +42,8 @@ keepincroffulls = all
 ## desturl = file:///usr/local/backup
 ## desturl = rsync://user@other.host//var/backup/bla
 ## desturl = s3+http://
-## desturl = ftp://myftpuser@ftp.example.org/remote/ftp/path
-desturl = rsync://prod_server@backup//home/prod_server/data
+desturl = ftp://backup@ftp.gpx.cz/var
+## desturl = rsync://prod_server@backup//home/prod_server/data
 
 # Only if you choose FTP
-# ftp_password = whateveryouwant
+ftp_password = changeme
