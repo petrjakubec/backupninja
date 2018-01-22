@@ -2,7 +2,8 @@ first, you need to install and configure mariadb
 ```
 # yum install -y mariadb-server || apt-get install -y mariadb-server
 # service mariadb start ||  sudo service mysqld start
-# mysql_secure_installation #just hit enter because by default there is no password
+# mysql_secure_installation #just hit enter because by default there is no password - I've set password: password
+
 ```
 
 after that you can log into db by password
