@@ -20,14 +20,18 @@ Manual configuration of backupninja can be easily done through tool **ninjahelpe
 
 File /etc/backup.d/20.mysql is a example of configuration which will create uncompressed sqldump from all databases (if you have more dbs, it'd be better specify separate job for each one by using ninjahelper).
 
-/etc/backup.d/20.mysql
+In ```/etc/backup.d/20-files.dub``` you can edit how frequently will be backup triggered.
+```
+when = everyday at 01            <-- the default
+```
 
+# Dry run
 For test reasons you can run the job instantly:
 ```
 # backupninja --now --debug
 ```
 
-
+# Logs
 logs can be found in:
 ```/var/log/backupninja.log``` 
 
