@@ -15,7 +15,8 @@ after that you can log into db by password
 # backupninja
 
 configuration of backupninja can be easily done through tool **ninjahelper**
-20.mysql is a example of configuretion which will create uncompressed sqldump from all databases (if you have more dbs, it would be bettter specify separate job for each one by using ninjahelper).
+
+20.mysql is a example of configuretion which will create uncompressed sqldump from all databases (if you have more dbs, it would be better specify separate job for each one by using ninjahelper).
 
 /etc/backup.d/20.mysql
 
@@ -30,3 +31,6 @@ logs can be found in:
 
 sqldump will be created in 
 ```/var/backups/mysql```
+
+# backupninja setup 
+is in the /etc/backup.d/20-files.dup
