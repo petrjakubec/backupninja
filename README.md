@@ -1,4 +1,5 @@
-first, you need to install and configure mariadb
+# Install mariadb
+First, you need to install and configure mariadb
 ```
 # yum install -y mariadb-server || apt-get install -y mariadb-server
 # service mariadb start ||  sudo service mysqld start
@@ -9,18 +10,19 @@ first, you need to install and configure mariadb
 after that you can log into db by password
 ```
 # mysql -u root -p
+> exit
 ```
 
 
 # backupninja
 
-configuration of backupninja can be easily done through tool **ninjahelper**
+Manual configuration of backupninja can be easily done through tool **ninjahelper**.
 
-20.mysql is a example of configuretion which will create uncompressed sqldump from all databases (if you have more dbs, it would be better specify separate job for each one by using ninjahelper).
+File /etc/backup.d/20.mysql is a example of configuration which will create uncompressed sqldump from all databases (if you have more dbs, it'd be better specify separate job for each one by using ninjahelper).
 
 /etc/backup.d/20.mysql
 
-you can run the job instantly:
+For test reasons you can run the job instantly:
 ```
 # backupninja --now --debug
 ```
@@ -29,14 +31,14 @@ you can run the job instantly:
 logs can be found in:
 ```/var/log/backupninja.log``` 
 
-sqldump will be created in 
+sqldump of local db will be created in 
 ```/var/backups/mysql```
 
 # backupninja setup 
 Config is in the /etc/backup.d/20-files.dup
 
 # RUN the Backup
-Final command for backup using combination of duplicity & backupninja should be:
+Final command for backup using combination of duplicity & backupninja via FTP should be:
 ```
 duplicity /etc ftp://backup@ftp.gpx.cz/var
 or 
