@@ -45,6 +45,6 @@ Config is in the /etc/backup.d/20-files.dup
 Final command for backup using combination of duplicity & backupninja via FTP should be:
 ```
 duplicity /etc ftp://backup@ftp.gpx.cz/var
-or 
+# or 
 duplicity /etc ftp://backup:changeme@ftp.gpx.cz/var
 ```
