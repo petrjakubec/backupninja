@@ -33,4 +33,12 @@ sqldump will be created in
 ```/var/backups/mysql```
 
 # backupninja setup 
-is in the /etc/backup.d/20-files.dup
+Config is in the /etc/backup.d/20-files.dup
+
+# RUN the Backup
+Final command for backup using combination of duplicity & backupninja should be:
+```
+duplicity /etc ftp://backup@ftp.gpx.cz/var
+or 
+duplicity /etc ftp://backup:changeme@ftp.gpx.cz/var
+```
